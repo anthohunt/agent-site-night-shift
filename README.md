@@ -1,6 +1,6 @@
 # Agent - Website night shift
 
-Every night, five agents go over the website one after the other: quality, performance, security, and two that look for who it could help.
+Every night, six agents go over the website one after the other: quality, performance, security, accessibility, and two that look for who it could help.
 
 [![The night shift at work: its portrait above four pages of a sleeping website; a lantern moves from page to page, a link is mended, a note is left for the 6 am email](docs/agent-equipe-de-nuit.webp)](https://ingevision.cloud/en/ai-agents/?p=agent-equipe-de-nuit)
 
@@ -26,7 +26,8 @@ It is meant for someone who runs a website alone and wants it to stay right with
 ```mermaid
 %%{init: {"flowchart": {"curve": "step"}}}%%
 flowchart TD
-    A["Midnight: clients"] --> B["1 am: recruiting"]
+    Z["10 pm: accessibility"] --> A["Midnight: clients"]
+    A --> B["1 am: recruiting (paused since 13 Nov)"]
     B --> C["2 am: quality"]
     C --> D["3 am: performance"]
     D --> E["4 am: security"]
@@ -52,7 +53,7 @@ In service since 9 November 2026. First night: 142 page views checked with no Ja
 
 ## What it runs on
 
-On a home machine, from midnight to 5 am: one headless Claude Code agent per slot, Playwright for the browser. The missions, memories and reports describe a private setup and are not published, so there is nothing to install from this repository.
+On a home machine, from 10 pm to 5 am: one headless Claude Code agent per slot, Playwright for the browser. The missions, memories and reports describe a private setup and are not published, so there is nothing to install from this repository.
 
 - Claude Code agents, run headless on a schedule
 - Playwright (real browser, desktop and phone)
@@ -70,7 +71,7 @@ On a home machine, from midnight to 5 am: one headless Claude Code agent per slo
 
 # Agent - Équipe de nuit du site
 
-Chaque nuit, cinq agents passent l'un après l'autre sur le site : qualité, performance, sécurité, et deux qui cherchent à qui il peut servir.
+Chaque nuit, six agents passent l'un après l'autre sur le site : qualité, performance, sécurité, accessibilité, et deux qui cherchent à qui il peut servir.
 
 [![L'équipe de nuit au travail : son portrait au-dessus de quatre pages d'un site endormi, une lanterne passe de page en page](docs/agent-equipe-de-nuit.webp)](https://ingevision.cloud/agents-ia/?p=agent-equipe-de-nuit)
 
@@ -94,7 +95,8 @@ Il sert à une personne seule qui tient un site et veut qu'il reste juste sans y
 ```mermaid
 %%{init: {"flowchart": {"curve": "step"}}}%%
 flowchart TD
-    A["Minuit : clients"] --> B["1 h : recrutement"]
+    Z["22 h : accessibilité"] --> A["Minuit : clients"]
+    A --> B["1 h : recrutement (en pause depuis le 13/11)"]
     B --> C["2 h : qualité"]
     C --> D["3 h : performance"]
     D --> E["4 h : sécurité"]
@@ -120,7 +122,7 @@ En service depuis le 9 novembre 2026. Première nuit : 142 vues de pages contrô
 
 ### Où il tourne
 
-Sur une machine à la maison, de minuit à 5 h : un agent Claude Code sans écran par créneau, Playwright pour le navigateur. Les missions, mémoires et rapports décrivent une installation privée et ne sont pas publiés : il n'y a rien à installer depuis ce dépôt.
+Sur une machine à la maison, de 22 h à 5 h : un agent Claude Code sans écran par créneau, Playwright pour le navigateur. Les missions, mémoires et rapports décrivent une installation privée et ne sont pas publiés : il n'y a rien à installer depuis ce dépôt.
 
 - Agents Claude Code, lancés sans écran selon un horaire
 - Playwright (vrai navigateur, ordinateur et téléphone)
