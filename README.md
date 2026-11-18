@@ -42,7 +42,7 @@ flowchart TD
     F --> J["Owner replies: yes ID or no ID"]
 ```
 
-- **One agent per night slot**, on a home machine, each with its own written mission and its own memory of past nights.
+- **One agent per night slot**, on the server, then a compute workstation, each with its own written mission and its own memory of past nights.
 - **What an agent may do alone**: factual, mechanical fixes (a broken link, a wrong "Live: No", a missing header). It publishes, checks the result online on desktop and phone, and commits with the reason. A fix it cannot see working online is rolled back.
 - **What it only proposes**: wording, design, anything that is the owner's choice. Replying "yes ID" or "no ID" to the morning email is the whole review.
 - **Effort is counted, not declared**: a script reads each agent's session afterwards (actions really taken, pages opened, user stories cited, repositories checked). Below the floor, the agent is sent back to finish what is missing.
@@ -53,7 +53,7 @@ In service since 9 November 2026. First night: 142 page views checked with no Ja
 
 ## What it runs on
 
-On a home machine, from 10 pm to 5 am: one headless Claude Code agent per slot, Playwright for the browser. The missions, memories and reports describe a private setup and are not published, so there is nothing to install from this repository.
+On the server, then a compute workstation, from 10 pm to 5 am: one headless Claude Code agent per slot, Playwright for the browser. The missions, memories and reports describe a private setup and are not published, so there is nothing to install from this repository.
 
 - Claude Code agents, run headless on a schedule
 - Playwright (real browser, desktop and phone)
@@ -111,7 +111,7 @@ flowchart TD
     F --> J["Réponse du propriétaire : oui ID ou non ID"]
 ```
 
-- **Un agent par créneau de nuit**, sur une machine à la maison, chacun avec sa mission écrite et sa mémoire des nuits passées.
+- **Un agent par créneau de nuit**, sur le serveur, puis un poste de calcul, chacun avec sa mission écrite et sa mémoire des nuits passées.
 - **Ce qu'un agent fait seul** : les corrections factuelles et mécaniques (lien cassé, « En ligne : Non » faux, en-tête manquant). Il met en ligne, vérifie le résultat en ligne sur ordinateur et téléphone, puis commite avec la raison. Une correction qu'il ne voit pas marcher en ligne est défaite.
 - **Ce qu'il propose seulement** : un texte, le design, tout ce qui est un choix du propriétaire. Répondre « oui ID » ou « non ID » au mail du matin suffit.
 - **L'effort est compté, pas déclaré** : un script relit la session de chaque agent (actions faites, pages ouvertes, user stories citées, dépôts vérifiés). Sous le plancher, l'agent est relancé sur ce qui manque.
@@ -122,7 +122,7 @@ En service depuis le 9 novembre 2026. Première nuit : 142 vues de pages contrô
 
 ### Où il tourne
 
-Sur une machine à la maison, de 22 h à 5 h : un agent Claude Code sans écran par créneau, Playwright pour le navigateur. Les missions, mémoires et rapports décrivent une installation privée et ne sont pas publiés : il n'y a rien à installer depuis ce dépôt.
+Sur le serveur, puis un poste de calcul, de 22 h à 5 h : un agent Claude Code sans écran par créneau, Playwright pour le navigateur. Les missions, mémoires et rapports décrivent une installation privée et ne sont pas publiés : il n'y a rien à installer depuis ce dépôt.
 
 - Agents Claude Code, lancés sans écran selon un horaire
 - Playwright (vrai navigateur, ordinateur et téléphone)
